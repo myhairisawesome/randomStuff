@@ -1,0 +1,6 @@
+// In the future I am going to implement some stuff using json
+
+{
+    "canvasWidth":800,
+    "canvasHeight":600,
+}
