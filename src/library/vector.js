@@ -70,6 +70,20 @@ export default class Vector {
         return this;
     }
 
+    dotProduct(vector) {
+        return this.x*vector.x+this.y*vector.y;
+    }
+
+    projection(vector) {
+        let scalarPojection = this.dotProduct(vector)/(Math.pow(vector.x,2) + Math.pow(vector.y,2));
+        return new Vector(scalarPojection*vector.x, scalarPojection*vector.y)
+    }
+
+    reflection(vector) {
+        vector.normalize();
+        let a = (2 * this.dotProduct(vector));
+    }
+
     distance(vector) {
         return Math.sqrt(Math.pow(vector.x - this.x,2) + Math.pow(vector.y - this.y,2));
     }
